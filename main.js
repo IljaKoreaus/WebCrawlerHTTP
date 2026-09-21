@@ -1,6 +1,6 @@
 const {crawlPage} = require('./crawl.js');
 
-function main() {
+async function main() {
 
     // Check Command Line Arguments & Throw
     // Error If Necessary
@@ -20,7 +20,11 @@ function main() {
     const baseURL = process.argv[2];
 
     console.log(`Starting Crawl Of ${baseURL}`);
-    crawlPage(baseURL);
+    const pages = await crawlPage(baseURL, baseURL, {});
+
+    for (const page of Object.entries(pages)) {
+        console.log(page);
+    }
 };
 
 main();
