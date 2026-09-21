@@ -19,5 +19,8 @@
   "homepage": "https://github.com/IljaKoreaus/WebCrawlerHTTP#readme",
   "devDependencies": {
     "jest": "^30.5.2"
+  },
+  "dependencies": {
+    "jsdom": "^20.0.3"
   }
 }
